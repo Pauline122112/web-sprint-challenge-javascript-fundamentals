@@ -143,15 +143,15 @@ function greeting(/*Your Code Here */){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(length, width,) {
+function CuboidMaker() {
   this.length = 4;
   this.width = 5;
-  this.height = [];
+  this.height = 5;
 }
 
 CuboidMaker.prototype.cube = function(empty){
   if(this.height.length <= 10){
-    this.height.push();
+    this.height.push(empty);
   }
 }
 
