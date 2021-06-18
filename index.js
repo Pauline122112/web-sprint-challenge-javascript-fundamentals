@@ -28,11 +28,9 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation() {
-  return 10;
+function summation(num1) {
+  return num1 = 1 + 2 + 3 + 4;
   };
-
-console.log(summation);
 
   
  
@@ -59,9 +57,15 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+  function animalNames(item){
+    zooAnimals.forEach(item)
+      console.log(item.animal_name);
+      console.log(item.scientific_name)
+    
+  };
+
+
+
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
