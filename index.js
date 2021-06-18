@@ -166,8 +166,8 @@ CuboidMaker.prototype.volume = function(object){
   Formula for cuboid surface area of a cube: 
   2 * (length * width + length * height + width * height)  */
 
-CuboidMaker.prototype.surfaceArea = function(){
-this.height = [];
+CuboidMaker.prototype.surfaceArea = function(area){
+  return area = this.length * this.width * 2 + this.length * this.height * 2 + this.width * this.height * 2;
 }
 
 
