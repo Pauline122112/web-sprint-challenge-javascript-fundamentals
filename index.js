@@ -195,7 +195,14 @@ cuboid.CuboidMaker();
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
 class CuboidMakerTwo{
-
+  constructor(){
+  this.length = 4;
+  this.width = 5;
+  this.height = 5;
+  }
+  volume() {
+    return this.length * this.width * this.height;
+  }
 }
 
 
