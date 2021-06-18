@@ -48,8 +48,9 @@ Closure is when a function reaches out to the function in the outer scope where 
 - Explicit Binding- This principle does not immediately invoke the function, it gives a new function instead which can be invoked later. 
 
 5. Why do we need super() in an extended class?
-To tell the parent object that there are new attributes from the child object that needs it attention. 
+To tell the parent object that there are new attributes from the child object that will be passing through to get its attention. 
 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
 ## Instructions
