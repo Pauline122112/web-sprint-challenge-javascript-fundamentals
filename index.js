@@ -149,13 +149,15 @@ function CuboidMaker() {
   this.height = 5;
 }
 
-CuboidMaker.prototype.cube = function(empty){
+CuboidMaker.prototype.volume = function(){
   if(this.height.length <= 10){
     this.height.push(empty);
   }
 }
 
+CuboidMaker.prototype.surfaceArea = function(){
 
+}
 
 
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
