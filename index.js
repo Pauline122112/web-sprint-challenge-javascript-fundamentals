@@ -16,7 +16,7 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
+//If a variable is having issues defining itself within nestedFunction then it can look outside of nestedFunction to try and find a variable in the outer function that it can feed from. 
 
 
 
@@ -58,13 +58,14 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(item){
-    zooAnimals.forEach(item)
-      console.log(item.animal_name);
-      console.log(item.scientific_name)
-    
+  function animalNames(){
+    zooAnimals.forEach(function(item){
+       return (`name:${item.animal_name}, scientific: ${item.scientific_name}`);
+      
+    });
+   
   };
-
+  console.log(animalNames());
 
 
   
@@ -89,8 +90,11 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(array, pop){
+   const newArray = array.filter(function(item){
+     return item.population <= pop;
+   }, 5);
+   return newArray;
   }
   
 
@@ -100,11 +104,15 @@ const zooAnimals = [
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-  function USApop(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
+  function USApop(array){
+    const value = array.reduce(function(acc, item){
+      return acc + item.population
+    });
+    return value;
+  };
   
-  
+  console.log(USApop(zooAnimals));
+
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
   /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
     * Use the higher-order function consume with 3 parameters: a, b and cb
