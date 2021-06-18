@@ -203,6 +203,10 @@ class CuboidMakerTwo{
   volume() {
     return this.length * this.width * this.height;
   }
+
+  surfaceArea() {
+    return this.length * this.width * 2 + this.length * this.height * 2 + this.width * this.height * 2;
+  }
 }
 
 
