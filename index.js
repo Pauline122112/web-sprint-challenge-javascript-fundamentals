@@ -28,9 +28,12 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(item){
-	return (item = 1 + 2 + 3 + 4);
-} 
+let summation = 0;
+for (var i = 0; i < 5; i++) {
+  summation += i;
+}
+console.log(summation);
+
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -106,7 +109,7 @@ const zooAnimals = [
 const habitats = [];
 
 function animalNames() {
-	zooAnimals.forEach(function (item) {
+zooAnimals.forEach(function (item) {
 		return habitats.push( `name:${item.animal_name}, scientific: ${item.scientific_name}`);
 	});
 }
@@ -145,14 +148,22 @@ function lowPopulationAnimals(array, pop) {
   Remember the reduce method takes two arguments: a callback (which itself takes two args - the accumulator and the item), and an initial value for the count.
   */
 
-function USApop(array) {
-	const value = array.reduce(function (acc, item) {
-		return acc + item.population;
-	});
-	return value;
-}
+//   const USApop = zooAnimals.reduce((accumulator, item) =>{
+// 	  return accumulator + item.population
+//   },0);
 
-console.log(USApop(zooAnimals));
+// console.log(`The population is ${USApop}`);
+
+
+function USApop(arr) {
+	const totalPop = arr.reduce(function (accumulator, item){
+		console.log(`I am the current value ${item.population}`);
+		return accumulator + item.population;
+	},0)
+		return totalPop
+	};
+
+console.log(`I am the total population ${USApop}`);
 
 // 🦁🦁🦁 Callbacks 🦁🦁🦁
 /* 🦁🦁🦁 Step 1: Create a higher-order function 🦁🦁🦁
